@@ -51,7 +51,7 @@ export class AuthService{
 
     async verifyUser(){
         try {
-            return this.account.createVerification("http://localhost:5173/verify-user")
+            return this.account.createVerification("https://blog-fzfaifyhe-hariom01010.vercel.app/verify-user")
         } catch (error) {
             console.log(error)
         }
@@ -67,7 +67,7 @@ export class AuthService{
     
     googleLogin(){
         try {
-            return this.account.createOAuth2Session('google', 'http://localhost:5173', 'http://localhost:5173/login')
+            return this.account.createOAuth2Session('google', 'https://blog-fzfaifyhe-hariom01010.vercel.app/', 'https://blog-fzfaifyhe-hariom01010.vercel.app/login')
         } catch (error) {
             console.log(error)
         }
@@ -75,7 +75,7 @@ export class AuthService{
 
     githubLogin(){
         try {
-            return this.account.createOAuth2Session('github', 'http://localhost:5173', 'http://localhost:5173/login')
+            return this.account.createOAuth2Session('github', 'https://blog-fzfaifyhe-hariom01010.vercel.app/', 'https://blog-fzfaifyhe-hariom01010.vercel.app/login')
         } catch (error) {
             console.log(error)
         }

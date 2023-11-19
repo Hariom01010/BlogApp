@@ -1,5 +1,8 @@
-# BlogApp
+<p align="center">
+     <img align="left" src="src/assets/logo.PNG">
+</p>
 
+# BlogApp
 BlogApp is a web development project that allows users to sign up and write blogs. It is built using Vite, React, Tailwind CSS, and integrates with Appwrite for user authentication and data storage.
 
 [Live Applcation]()

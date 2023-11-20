@@ -19,6 +19,8 @@ function Card({title,content, id, imageId, userId}) {
       if(data.$id !== userId){
         setBtnClass("hidden")
       }
+    }).catch(()=>{
+      setBtnClass("hidden")
     })
   },[])
 

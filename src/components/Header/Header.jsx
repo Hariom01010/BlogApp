@@ -54,7 +54,7 @@ function Header() {
 
     return (    
         <>
-        <div className='px-6 py-4 flex justify-between items-end shadow-md sticky'>
+        <div className='px-6 py-4 flex justify-between items-end shadow-md sticky z-50'>
             <div className='text-pink-700 text-xl font-bold md:text-2xl'>
                 <h2><Link to="/">BlogNow</Link></h2>
             </div>

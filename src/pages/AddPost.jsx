@@ -13,11 +13,15 @@ function AddPost() {
     const editorRef = useRef(null)
     const {register, handleSubmit} = useForm()
     const [userId, setUseId] = useState(null)
+    const [btnClass, setBtnClass] = useState("")
     const navigate = useNavigate()
 
     useEffect(()=>{
-        authService.getUser().then((data)=>{
+        authService.getUserInfo().then((data)=>{
             setUseId(data.$id)
+            if(!data.emailVerification){
+                setBtnClass("pointer-events-none opacity-50")
+            }
         })
         .catch(()=>{
             navigate("/")
@@ -27,6 +31,7 @@ function AddPost() {
     
     const log = async (data)=>{
         try {
+            setBtnClass("pointer-events-none opacity-50")
             const imgData = await storageService.fileUpload(data.image[0])
             console.log("Succesful Upload")
             const featuredImage = imgData.$id
@@ -78,7 +83,7 @@ function AddPost() {
                         content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
                     }}
                 />
-                <button typek="submit" className='bg-pink-600 text-slate-50 mx-auto mt-12 py-2 px-8 rounded-md hover:bg-pink-800 rounded:md'>Submit</button>
+                <button typek="submit" className={`bg-pink-600  text-slate-50 mx-auto mt-12 py-2 px-8 rounded-md hover:bg-pink-800 rounded:md ${btnClass}`}>Submit</button>
             </form>
         </>
     )

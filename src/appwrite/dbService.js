@@ -41,6 +41,14 @@ export class DbService{
             throw error
         }
     }
+
+    async deleteDocument(id){
+        try {
+            return await this.databases.deleteDocument(databaseId,collectionId,id)
+        } catch (error) {
+            console.log(error)
+        }
+    }
 }
 
 const dbService = new DbService();

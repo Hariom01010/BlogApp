@@ -75,7 +75,7 @@ export class AuthService{
 
     githubLogin(){
         try {
-            return this.account.createOAuth2Session('github', 'https://blog-fzfaifyhe-hariom01010.vercel.app/', 'https://blog-fzfaifyhe-hariom01010.vercel.app/login')
+            return this.account.createOAuth2Session('github', 'https://blog-fzfaifyhe-hariom01010.vercel.app/', 'https://blog-fzfaifyhe-hariom01010.vercel.app/login ')
         } catch (error) {
             console.log(error)
         }

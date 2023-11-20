@@ -36,7 +36,7 @@ function Home() {
             <h2 className="text-pink-600 font-bold py-2 px-4 text-center text-2xl 2xl:text-3xl 2xl:text-left">
               What is BlogNow
             </h2>
-            <p className=" mt-4 text-center text-[15px] px-4 sm:text-base 2xl:text-xl 2xl:leading-9 2xl:text-left">
+            <p className=" mt-4 text-[15px] px-4 sm:text-base 2xl:text-xl 2xl:leading-9">
               In the age of digital connectivity and information sharing,
               "BlogNow" emerges as a powerful and versatile platform designed to
               cater to the dynamic needs of content creators, writers, and
@@ -81,10 +81,6 @@ function Home() {
               </li>
             </ul>
           </div>
-        </div>
-
-        <div className="mt-20">
-          <h2 className="ml-20 text-3xl">Recent Posts:</h2>
         </div>
       </div>
     </>

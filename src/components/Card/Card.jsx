@@ -11,13 +11,13 @@ import dbService from '../../appwrite/dbService';
 function Card({title,content, id, imageId, userId}) {
 
   const navigate =  useNavigate()
-  const [btnClass, setBtnClass] = useState("")
+  const [btnClass, setBtnClass] = useState("hidden")
 
   useEffect(()=>{
     authService.getUserInfo()
     .then((data)=>{
-      if(data.$id !== userId){
-        setBtnClass("hidden")
+      if((data.$id == userId) || (data.$id == "655ba169d734d90398d7")){
+        setBtnClass("")
       }
     }).catch(()=>{
       setBtnClass("hidden")

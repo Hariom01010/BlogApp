@@ -11,7 +11,7 @@ function Footer() {
         <div className='flex justify-center my-12'>
            <a href='https://www.linkedin.com/in/hariom-vashista-603436226/' target='_blank' className='mx-2'><AiFillLinkedin size={38} /></a>
            <a href='https://github.com/Hariom01010' target='_blank' className='mx-2'><AiFillGithub size={38} /></a>
-           <a href='https://github.com/Hariom01010' target='_blank' className='mx-2'><AiFillInstagram size={38} /></a>
+           <a href='https://www.instagram.com/hariom_vashista/' target='_blank' className='mx-2'><AiFillInstagram size={38} /></a>
         </div>
 
         <div className='flex justify-center text-sm mt-[]'>

@@ -39,7 +39,7 @@ function Card({title,content, id, imageId, userId}) {
             <h2 className='my-2 text-sm md:text-2xl font-bold mb-3'>{title}</h2>
             <p className='text-xs md:text-lg'>{parse(content.slice(0,250))}</p>
           </div>
-          <div className='lg:w-1/6 w-full flex items-end justify-center mt-20'>     
+          <div className='lg:w-1/6 w-full flex items-end justify-center mt-8 xl:mt-20'>     
             <button className='bg-pink-600 text-slate-50 px-4 py-1 rounded-md'><Link to={`/post/${id}`}>View</Link></button>
             <button className={`bg-red-700 text-slate-50 px-2 h-full rounded-md py-1 mx-2 flex justify-center items-center ${btnClass}`} onClick={deleteBlog}><MdDelete className='mr-1'/>Delete</button>
           </div>

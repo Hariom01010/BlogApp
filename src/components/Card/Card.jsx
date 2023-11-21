@@ -28,7 +28,7 @@ function Card({title,content, id, imageId, userId}) {
     setBtnClass("pointer-events-none opacity-50")  
     dbService.deleteDocument(id)
     .then(()=>{
-      navigate("/posts")
+      navigate("/")
     })
   }
   return (
@@ -39,10 +39,9 @@ function Card({title,content, id, imageId, userId}) {
             <h2 className='my-2 text-sm md:text-2xl font-bold mb-3'>{title}</h2>
             <p className='text-xs md:text-lg'>{parse(content.slice(0,250))}</p>
           </div>
-          <div className='lg:w-1/6 flex items-end'>
-            <p className='hidden xl:inline hover:cursor-pointer hover:text-pink-600 w-full h-full text-right mt-20'><Link to={`/post/${id}`} title={title} content={content} imageId={imageId} >View -&gt;</Link></p>
-            <button className={`bg-red-700 text-slate-50 w-2/3 h-full rounded-md py-1 mx-2 flex justify-center items-center ${btnClass}`} onClick={deleteBlog}><MdDelete className='mr-1'/>Delete</button>
-            <button className='bg-pink-600 px-4 py-1 my-4 rounded-sm xl:hidden'><Link to={`/post/${id}`}>View</Link></button>
+          <div className='lg:w-1/6 w-full flex items-end justify-center mt-20'>     
+            <button className='bg-pink-600 text-slate-50 px-4 py-1 rounded-md'><Link to={`/post/${id}`}>View</Link></button>
+            <button className={`bg-red-700 text-slate-50 px-2 h-full rounded-md py-1 mx-2 flex justify-center items-center ${btnClass}`} onClick={deleteBlog}><MdDelete className='mr-1'/>Delete</button>
           </div>
         </div>
 

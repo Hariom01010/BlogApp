@@ -22,7 +22,7 @@ function Home() {
 
   return (
     <>
-      <div className={`relative md:w-2/6 w-5/6 mx-auto text-center text-sm lg:text-base -mt-10 border-2 border-green-600 bg-green-200 dark:text-black lg:px-8 py-4 rounded-sm ${className}`}>
+      <div className={`relative md:w-2/6 z-50 w-5/6 mx-auto text-center text-sm lg:text-base -mt-10 border-2 border-green-600 bg-green-200 dark:text-black lg:px-8 py-4 rounded-sm ${className}`}>
         <h1>Your Email is not verified. Please check your email.</h1>
       </div>
       <div >

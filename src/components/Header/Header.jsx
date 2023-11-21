@@ -54,7 +54,7 @@ function Header() {
 
     return (    
         <>
-        <div className='px-6 py-4 flex justify-between items-end shadow-md sticky z-50'>
+        <div className='px-6 py-4 flex justify-between items-end shadow-md sticky z-40'>
             <div className='text-pink-700 text-xl font-bold md:text-2xl'>
                 <h2><Link to="/">BlogNow</Link></h2>
             </div>
@@ -74,7 +74,7 @@ function Header() {
 
                     {/* Theme  */}
                     {
-                        theme== "light" ? <button onClick={handleThemeDark} className='mr-3'><BsSun size={23}/></button> : <button onClick={handleThemeLight} className='mr-3'><BsMoon size={20}/></button>
+                        theme== "light" ? <button onClick={handleThemeDark} className='mr-1'><BsSun size={23}/></button> : <button onClick={handleThemeLight} className='mr-3'><BsMoon size={20}/></button>
                     }
 
                     {/* Login and Options  */}
@@ -92,7 +92,7 @@ function Header() {
                     }
 
                     {/* Mobile Navbar  */}
-                    <div className={`ml-4 rounded-full cursor-pointer md:hidden`} onClick={handleShowNavbar}>
+                    <div className={`ml-2 rounded-full cursor-pointer md:hidden`} onClick={handleShowNavbar}>
                         <p className='p-1'><RxHamburgerMenu size={22}/></p>   
                     </div>
                 </div>
